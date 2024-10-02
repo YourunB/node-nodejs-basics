@@ -10,7 +10,7 @@ const create = async () => {
     await fs.promises.access(filePath);
     console.error('FS operation failed');
   } catch (error) {
-    error.code === 'ENOENT' ? await fs.promises.writeFile(filePath, 'I am fresh and young') : console.error(error);
+      if (error.code === 'ENOENT') await fs.promises.writeFile(filePath, 'I am fresh and young');
   }
 }
 
