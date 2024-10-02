@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-const folderPath = path.join(process.cwd(), 'src/fs/files');
-const newFolderPath = path.join(process.cwd(), 'src/fs/files_copy');
+const currentPath = process.cwd();
+const folderPath = path.join(currentPath, 'src/fs/files');
+const newFolderPath = path.join(currentPath, 'src/fs/files_copy');
 
 const copy = async () => {
   try {
