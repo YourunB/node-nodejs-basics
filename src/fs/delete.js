@@ -7,7 +7,7 @@ const remove = async () => {
   try {
     await fs.promises.access(filePath);
     await fs.promises.unlink(filePath);
-    console.log('FS operation failed');
+    console.error('FS operation failed');
   } catch (error) {
       console.error('FS operation failed');
   }
