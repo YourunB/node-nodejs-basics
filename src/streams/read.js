@@ -7,7 +7,7 @@ const read = async () => {
 
   readStream.on('data', (chunk) => process.stdout.write(chunk));
   readStream.on('error', () => console.error('Error to read file'));
-  readStream.on('end', () => console.log('\nSucces'));
+  readStream.on('end', () => console.log('\nSuccess'));
 };
 
 await read();

@@ -7,7 +7,6 @@ const write = async () => {
 
   process.stdin.pipe(write);
 
-  write.on('finish', () => console.log('Success'));
   write.on('error', () => console.error('Error to write'));
   console.log('Enter text:');
 };
